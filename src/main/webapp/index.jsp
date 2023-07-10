@@ -64,45 +64,53 @@
             <th>작업일자</th>
             <%
                 if(wifiInfoVOs != null) {
-                    for(WifiInfoVO wifiInfoVO : wifiInfoVOs) {
+                    if(wifiInfoVOs.size() != 0) {
+                        for(WifiInfoVO wifiInfoVO : wifiInfoVOs) {
             %>
-            <tr class="data-exit wifi-info" onclick="goWifiDetail(
-                '<%=wifiInfoVO.getId()%>', '<%=wifiInfoVO.getWifiDistance()%>',
-                '<%=wifiInfoVO.getWifiMngNo()%>', '<%=wifiInfoVO.getWifiBorough()%>',
-                '<%=wifiInfoVO.getWifiName()%>', '<%=wifiInfoVO.getWifiAddress()%>',
-                '<%=wifiInfoVO.getWifiAddressDetail()%>', '<%=wifiInfoVO.getWifiFloor()%>',
-                '<%=wifiInfoVO.getWifiType()%>', '<%=wifiInfoVO.getWifiAgency()%>',
-                '<%=wifiInfoVO.getWifiService()%>', '<%=wifiInfoVO.getWifiNetType()%>',
-                '<%=wifiInfoVO.getWifiInstallYear()%>', '<%=wifiInfoVO.getWifiInOutDoor()%>',
-                '<%=wifiInfoVO.getWifiConnectEnv()%>', '<%=wifiInfoVO.getWifiLat()%>',
-                '<%=wifiInfoVO.getWifiLnt()%>', '<%=wifiInfoVO.getWifiDate()%>')">
-                <td><%=wifiInfoVO.getWifiDistance() %></td>
-                <td><%=wifiInfoVO.getWifiMngNo() %></td>
-                <td><%=wifiInfoVO.getWifiBorough() %></td>
-                <td><%=wifiInfoVO.getWifiName() %></td>
-                <td><%=wifiInfoVO.getWifiAddress() %></td>
-                <td><%=wifiInfoVO.getWifiAddressDetail() %></td>
-                <td><%=wifiInfoVO.getWifiFloor() %></td>
-                <td><%=wifiInfoVO.getWifiType() %></td>
-                <td><%=wifiInfoVO.getWifiAgency() %></td>
-                <td><%=wifiInfoVO.getWifiService() %></td>
-                <td><%=wifiInfoVO.getWifiNetType() %></td>
-                <td><%=wifiInfoVO.getWifiInstallYear() %></td>
-                <td><%=wifiInfoVO.getWifiInOutDoor() %></td>
-                <td><%=wifiInfoVO.getWifiConnectEnv() %></td>
-                <td><%=wifiInfoVO.getWifiLat() %></td>
-                <td><%=wifiInfoVO.getWifiLnt() %></td>
-                <td><%=wifiInfoVO.getWifiDate() %></td>
-            </tr>
+                            <tr class="data-exit wifi-info" onclick="goWifiDetail(
+                                '<%=wifiInfoVO.getId()%>', '<%=wifiInfoVO.getWifiDistance()%>',
+                                '<%=wifiInfoVO.getWifiMngNo()%>', '<%=wifiInfoVO.getWifiBorough()%>',
+                                '<%=wifiInfoVO.getWifiName()%>', '<%=wifiInfoVO.getWifiAddress()%>',
+                                '<%=wifiInfoVO.getWifiAddressDetail()%>', '<%=wifiInfoVO.getWifiFloor()%>',
+                                '<%=wifiInfoVO.getWifiType()%>', '<%=wifiInfoVO.getWifiAgency()%>',
+                                '<%=wifiInfoVO.getWifiService()%>', '<%=wifiInfoVO.getWifiNetType()%>',
+                                '<%=wifiInfoVO.getWifiInstallYear()%>', '<%=wifiInfoVO.getWifiInOutDoor()%>',
+                                '<%=wifiInfoVO.getWifiConnectEnv()%>', '<%=wifiInfoVO.getWifiLat()%>',
+                                '<%=wifiInfoVO.getWifiLnt()%>', '<%=wifiInfoVO.getWifiDate()%>')">
+                                <td><%=wifiInfoVO.getWifiDistance() %></td>
+                                <td><%=wifiInfoVO.getWifiMngNo() %></td>
+                                <td><%=wifiInfoVO.getWifiBorough() %></td>
+                                <td><%=wifiInfoVO.getWifiName() %></td>
+                                <td><%=wifiInfoVO.getWifiAddress() %></td>
+                                <td><%=wifiInfoVO.getWifiAddressDetail() %></td>
+                                <td><%=wifiInfoVO.getWifiFloor() %></td>
+                                <td><%=wifiInfoVO.getWifiType() %></td>
+                                <td><%=wifiInfoVO.getWifiAgency() %></td>
+                                <td><%=wifiInfoVO.getWifiService() %></td>
+                                <td><%=wifiInfoVO.getWifiNetType() %></td>
+                                <td><%=wifiInfoVO.getWifiInstallYear() %></td>
+                                <td><%=wifiInfoVO.getWifiInOutDoor() %></td>
+                                <td><%=wifiInfoVO.getWifiConnectEnv() %></td>
+                                <td><%=wifiInfoVO.getWifiLat() %></td>
+                                <td><%=wifiInfoVO.getWifiLnt() %></td>
+                                <td><%=wifiInfoVO.getWifiDate() %></td>
+                            </tr>
             <%
                 }
-            } else {
+                    } else {
             %>
-            <tr class="data-not-exit">
-                <td colspan="17">위치 정보를 입력한 후에 조회해 주세요.</td>
-            </tr>
+                        <tr class="data-not-exit">
+                            <td colspan="17">위치 정보를 입력한 후에 조회해 주세요.</td>
+                        </tr>
             <%
-                }
+                    }
+                } else {
+            %>
+                <tr class="data-not-exit">
+                    <td colspan="17">위치 정보를 입력한 후에 조회해 주세요.</td>
+                </tr>
+            <%
+            }
             %>
         </table>
     </div>
