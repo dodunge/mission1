@@ -1,0 +1,32 @@
+button {
+    display: flex;
+}
+table {
+    width: 100%;
+}
+table, td, th {
+    border : 1px solid lightgray;
+    border-collapse : collapse;
+}
+th {
+    background-color: #01AA6F;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 380px;
+}
+td {
+    padding: 5px;
+}
+td:hover {
+    background-color:lightgray !important;
+    cursor: pointer !important;
+}
+.add-button {
+    text-align: center;
+    padding: 10px 0px;
+}
+th > label {
+    display: block
+}

@@ -1,0 +1,43 @@
+button {
+    display: flex;
+}
+table {
+    width: 100%;
+}
+table, td, th {
+    border : 1px solid lightgray;
+    border-collapse : collapse;
+}
+th {
+    background-color: #01AA6F;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding : 20px;
+}
+td {
+    font-weight: bold;
+    padding: 5px;
+}
+tr:nth-child(even){
+    background-color: #ffffff;
+}
+tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+tr:hover td{
+    background-color:lightgray !important;
+    cursor: pointer !important;
+}
+.data-exit > td {
+    text-align: left;
+    padding : 8px 8px;
+}
+.data-not-exit > td {
+    text-align: center;
+    padding : 30px;
+}
+.history-delete{
+    text-align: center !important;
+}

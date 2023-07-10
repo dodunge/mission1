@@ -1,0 +1,25 @@
+button {
+    display: flex;
+}
+table {
+    width: 100%;
+}
+table, td, th {
+    border : 1px solid lightgray;
+    border-collapse : collapse;
+}
+th {
+    background-color: #01AA6F;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    padding : 10px;
+    width: 380px;
+}
+td {
+    font-weight: bold;
+    padding: 5px;
+}
+.bookmark-div{
+    align-content: center;
+}
